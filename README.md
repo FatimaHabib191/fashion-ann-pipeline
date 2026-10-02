@@ -14,7 +14,6 @@ This project implements a reproducible Fashion-MNIST classification workflow cov
 * Reproducible pipeline execution using `dvc repro`
 * Git and DVC conflict resolution
 
-The target is **at least 85% test accuracy** on the Fashion-MNIST test set.
 
 ## Dataset
 
