@@ -58,4 +58,6 @@ Thumbs.db
 # =========================
 
 *.egg-info/
-/models
+models/
+/confusion_matrix.png
+/metrics.json
