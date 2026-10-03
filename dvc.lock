@@ -23,8 +23,8 @@ stages:
       nfiles: 2
     - path: src/preprocess.py
       hash: md5
-      md5: 08c3571069558b8eb242b031dd6abca8
-      size: 1551
+      md5: fea44b3dc9d1b991697054fb07fe79a2
+      size: 1494
     params:
       params.yaml:
         preprocess.seed: 42

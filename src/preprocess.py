@@ -25,9 +25,9 @@ y_train = train_data["labels"]
 x_test = test_data["images"].astype("float32") / 255.0
 y_test = test_data["labels"]
 
-# Explicitly constrain normalized values to [0, 1]
-x_train = np.minimum(np.maximum(x_train, 0.0), 1.0)
-x_test = np.minimum(np.maximum(x_test, 0.0), 1.0)
+# Explicitly clip normalized values to [0, 1]
+x_train = np.clip(x_train, 0.0, 1.0)
+x_test = np.clip(x_test, 0.0, 1.0)
 
 x_train, x_val, y_train, y_val = train_test_split(
     x_train,
@@ -37,8 +37,8 @@ x_train, x_val, y_train, y_val = train_test_split(
     stratify=y_train
 )
 
-# Constrain validation data to [0, 1]
-x_val = np.minimum(np.maximum(x_val, 0.0), 1.0)
+# Clip validation data as well
+x_val = np.clip(x_val, 0.0, 1.0)
 
 np.savez_compressed(
     os.path.join(PROCESSED_DIR, "train.npz"),
